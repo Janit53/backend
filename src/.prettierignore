@@ -1,0 +1,9 @@
+<!-- which files i dont want to apply prettier to -->
+
+/.vscode
+/node_modules
+./dist
+
+*.env
+.env
+.env.*
