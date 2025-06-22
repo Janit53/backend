@@ -1,2 +1,14 @@
 What is jwt ?
 It is a bearer token. Whoever has this token will get the data, its like a key to a lock.
+
+ const uploadResult = await cloudinary.uploader
+       .upload(
+           'https://res.cloudinary.com/demo/image/upload/getting-started/shoes.jpg', {
+               public_id: 'shoes',
+           }
+       )
+       .catch((error) => {
+           console.log(error);
+       });
+    
+    console.log(uploadResult);
