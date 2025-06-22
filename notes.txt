@@ -1,0 +1,2 @@
+What is jwt ?
+It is a bearer token. Whoever has this token will get the data, its like a key to a lock.
