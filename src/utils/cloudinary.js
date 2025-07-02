@@ -1,7 +1,6 @@
 import { v2 as cloudinary } from "cloudinary";
-import fs from "fs"
+import fs from "fs";
 
-import { v2 as cloudinary } from 'cloudinary';
 
 const uploadOnCloudinary = async (localFilePath) => {
     try {
@@ -13,10 +12,10 @@ const uploadOnCloudinary = async (localFilePath) => {
         });
 
         // file has uploaded successfully
-        console.log("file is uploaded on cloudinary", response.url);
+        console.log("file is uploaded on cloudinary", response);
 
         // should i remove my file from the local machine???
-        // fs.unlinkSync(localFilePath);
+        fs.unlinkSync(localFilePath);
 
         return response;
     } catch (error) {
@@ -29,7 +28,7 @@ const uploadOnCloudinary = async (localFilePath) => {
 cloudinary.config({
     cloud_name: process.env.CLODINARY_CLOUD_NAME,
     api_key: process.env.CLODINARY_APY_KEY,
-    api_secret: CLOUDINARY_API_SECRET // Click 'View API Keys' above to copy your API secret
+    api_secret: process.env.CLOUDINARY_API_SECRET // Click 'View API Keys' above to copy your API secret
 });
 
 
