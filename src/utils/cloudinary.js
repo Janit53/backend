@@ -12,7 +12,7 @@ const uploadOnCloudinary = async (localFilePath) => {
         });
 
         // file has uploaded successfully
-        console.log("file is uploaded on cloudinary", response);
+        // console.log("file is uploaded on cloudinary", response);
 
         // should i remove my file from the local machine???
         fs.unlinkSync(localFilePath);
